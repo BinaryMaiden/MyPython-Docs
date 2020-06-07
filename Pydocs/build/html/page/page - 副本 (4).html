@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.字典(dict) &mdash; Pydocs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="4.集合(set)" href="page - 副本 (3).html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Pydocs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="page.html">1.列表(list)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page - 副本.html">2.元组(tuple)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page - 副本 (2).html">3.字符串(str)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page - 副本 (3).html">4.集合(set)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5.字典(dict)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a">a.字典的定义</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b">b.主要方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c">c.字典合并的方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#d">d.利用字典实现多分支功能(重要应用)</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Pydocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>5.字典(dict)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/page/page - 副本 (4).rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dict">
+<h1>5.字典(dict)<a class="headerlink" href="#dict" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a">
+<h2>a.字典的定义<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h2>
+<p>一种有索引的数据，每个变量value对应一个索引key,其中key必须是不可变的数据，且在字典中不能重复</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="b">
+<h2>b.主要方法<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h2>
+<p>①keys，values，items
+::
+分别返回所有键(索引)，所有变量，所有键值对(元组形式)
+<cite>注：这三者返回的都是list类型数据</cite>
+<strong>遍历一个字典只需遍历其key，即可用dict[key]来访问对应的value，故key的重要性更高</strong></p>
+<p>②clear
+::
+字典清空，删除所有键对值</p>
+<p>③get
+::
+(用于保证取到值)
+操作格式：
+dict.get(key, default=None)
+若key存在，则返回对应value，否则返回对应的default参数(默认为None)</p>
+<p>③pop
+::
+效果同之前其他序列的pop方法，接受参数key，弹出其对应的value</p>
+<p>④字典更新(update方法)
+::
+dict1.update(dict2)
+将dict2中的键值对加入dict1中
+<strong>当dict1和dict2中存在相同键时，dict2的值将覆盖dict1的值(新的覆盖旧的)</strong></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="c">
+<h2>c.字典合并的方法<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>①两次update</dt><dd><div class="line-block">
+<div class="line">用一个空字典分别更新字典x和字典y，得到了x与y的合并(更新x和y的顺序将影响结果)</div>
+</div>
+</dd>
+<dt>②先copy再update</dt><dd><div class="line-block">
+<div class="line">先copy其中一个再update另一个(顺序有影响)</div>
+</div>
+</dd>
+<dt>③先构造再update</dt><dd><div class="line-block">
+<div class="line">dict1 = dict(dict0),得到了一个副本此时dict1，再update(原理同上)</div>
+</div>
+</dd>
+</dl>
+<p>④使用dict函数关键字hack
+::
+<code class="docutils literal notranslate"><span class="pre">dict3</span> <span class="pre">=</span> <span class="pre">dict(dict1,</span> <span class="pre">**dict2)</span></code>
+本质为利用了函数传参的技巧，故仅适用于dict2所有的key均为字符串的情形(数字不能作为形参名称)</p>
+<p>⑤字典推导式
+::
+d = {k:v for t in[d1, d2] for k,v in t.items}
+<cite>比较复杂，本质上为循环的嵌套</cite></p>
+<p>⑥列表元素的拼接
+::
+d = dict(list(d1.items()) + list(d2.items()))
+<strong>注:必须要有具有k,v结构的特殊列表才能转化为字典，如上述生成的两个列表中的元素均为(a, b)型的元组</strong></p>
+<p>⑧导入模块函数chain和ChainMap
+::
+from collections import ChainMap
+d3 = ChainMap(d1,d2),此时生成一个chainmap对象
+再将d3转换为dict型数据</p>
+<dl>
+<dt>⑨利用字典拆包**(最佳方法)**</dt><dd><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">dict3</span> <span class="pre">=</span> <span class="pre">{**dict1,</span> <span class="pre">**dict2}</span></code></div>
+</div>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="d">
+<h2>d.利用字典实现多分支功能(重要应用)<a class="headerlink" href="#d" title="Permalink to this headline">¶</a></h2>
+<p>::
+用于实现类似于C++中switch的作用
+先将所有分支放在字典中，根据输入的键提取相应的值，实现多分支</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="page - 副本 (3).html" class="btn btn-neutral float-left" title="4.集合(set)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, XiongXinrui
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

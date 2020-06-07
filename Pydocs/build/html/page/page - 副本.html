@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.元组(tuple) &mdash; Pydocs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.字符串(str)" href="page - 副本 (2).html" />
+    <link rel="prev" title="1.列表(list)" href="page.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Pydocs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="page.html">1.列表(list)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2.元组(tuple)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a">a.元组定义</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b">b.与列表的本质区别</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c">c.序列的分类</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page - 副本 (2).html">3.字符串(str)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page - 副本 (3).html">4.集合(set)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page - 副本 (4).html">5.字典(dict)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Pydocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>2.元组(tuple)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/page/page - 副本.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tuple">
+<h1>2.元组(tuple)<a class="headerlink" href="#tuple" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a">
+<h2>a.元组定义<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h2>
+<p>元组是一系列按特定排列的元素组成的序列，在Python中用()来表示</p>
+<p><strong>注：Python中对于用逗号分开的量，即使不使用小括号也默认为元组</strong></p>
+<p>如：1, 3, 5, 7 = (1, 3, 5, 7)</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="b">
+<h2>b.与列表的本质区别<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h2>
+<p><strong>元组为不可变对象，列表为可变对象</strong></p>
+<p><cite>即元组也可以像列表一样切片，但不能像列表一样更改</cite></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="c">
+<h2>c.序列的分类<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>①按照是否可变：</dt><dd><div class="line-block">
+<div class="line">可变：list，set，dict</div>
+</div>
+<blockquote>
+<div><p>不可变：str，tuple</p>
+</div></blockquote>
+</dd>
+<dt>②按照是否有序：</dt><dd><div class="line-block">
+<div class="line">有序：list，tuple，str</div>
+</div>
+<blockquote>
+<div><p>无序：set，dict</p>
+</div></blockquote>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="page - 副本 (2).html" class="btn btn-neutral float-right" title="3.字符串(str)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="page.html" class="btn btn-neutral float-left" title="1.列表(list)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, XiongXinrui
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

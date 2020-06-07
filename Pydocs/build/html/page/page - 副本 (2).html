@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.字符串(str) &mdash; Pydocs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.集合(set)" href="page - 副本 (3).html" />
+    <link rel="prev" title="2.元组(tuple)" href="page - 副本.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Pydocs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="page.html">1.列表(list)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page - 副本.html">2.元组(tuple)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3.字符串(str)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a">a.字符串定义</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b">b.字符串中的特殊操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c">c.序列的拆包操作</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">①</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">②</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page - 副本 (3).html">4.集合(set)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page - 副本 (4).html">5.字典(dict)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Pydocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>3.字符串(str)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/page/page - 副本 (2).rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="str">
+<h1>3.字符串(str)<a class="headerlink" href="#str" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a">
+<h2>a.字符串定义<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h2>
+<p>由’’或””表示的一系列元素组成的无序序列</p>
+<p><strong>与C++不同，Python中单引号，双引号均可用于字符串</strong></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="b">
+<h2>b.字符串中的特殊操作<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>①join方法</dt><dd><div class="line-block">
+<div class="line">例：’,’.join([‘a’, ‘b’, ‘c’])，返回’a, b, c’
+表示将列表中的字符串元素抽出，插入原字符串后合成一个新的字符串</div>
+</div>
+</dd>
+<dt>②orf函数，chr函数</dt><dd><div class="line-block">
+<div class="line">orf()接受长度为一的字符串参数，返回其在Unicode中编号</div>
+</div>
+<blockquote>
+<div><p>chr()接受整数参数，返回Unicode中对应字符</p>
+</div></blockquote>
+</dd>
+<dt>③转义字符</dt><dd><div class="line-block">
+<div class="line">表示为+小写字符</div>
+</div>
+<blockquote>
+<div><dl class="simple">
+<dt>需要转义字符不被解析的方法</dt><dd><p>使用\或者在字符串引号之前加上r</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="c">
+<h2>c.序列的拆包操作<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>①<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>mystring = ‘hello’
+a1, a2, a3, a4, a5 = mystring
+则5个元素分别赋给5个变量</p>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h3>②<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>a = [1, 2, 3]</p>
+<p><code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">[*a,</span> <span class="pre">4]</span></code>    <cite>其中*表示拆包操作</cite></p>
+<p>则b = [1, 2, 3, 4]</p>
+</div></blockquote>
+<p>序列均支持拆包操作</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="page - 副本 (3).html" class="btn btn-neutral float-right" title="4.集合(set)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="page - 副本.html" class="btn btn-neutral float-left" title="2.元组(tuple)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, XiongXinrui
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

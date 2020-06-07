@@ -1,0 +1,252 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.集合(set) &mdash; Pydocs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.字典(dict)" href="page - 副本 (4).html" />
+    <link rel="prev" title="3.字符串(str)" href="page - 副本 (2).html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Pydocs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="page.html">1.列表(list)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page - 副本.html">2.元组(tuple)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page - 副本 (2).html">3.字符串(str)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4.集合(set)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a">a.集合定义和特性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b">b.集合的特色操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c">c.特殊类型</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page - 副本 (4).html">5.字典(dict)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Pydocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>4.集合(set)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/page/page - 副本 (3).rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="set">
+<h1>4.集合(set)<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a">
+<h2>a.集合定义和特性<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h2>
+<p>集合是一系列元素组成的无序无重复序列，在Python中用{}来表示</p>
+<p>特性为无序，且无重复元素</p>
+<p><strong>无重复的特性使得集合可以作为类型转换中介</strong></p>
+<p><strong>集合无序，故不可通过下标访问</strong></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="b">
+<h2>b.集合的特色操作<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h2>
+<p>①比大小(逻辑：判断是否为子集)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>例：set1 &gt; set2
+则系统判断set2是否为set1的真子集
+</pre></div>
+</div>
+<p>②求交集，并集，差集(A中有B中无)，以及两个集合中不同元素(先求并集后去掉交集)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">则分别可用</span>
+<span class="n">set1</span><span class="o">&amp;</span><span class="n">set2</span>
+<span class="n">set1</span><span class="o">|</span><span class="n">set2</span>
+<span class="n">set1</span><span class="o">-</span><span class="n">set2</span>
+<span class="n">set1</span><span class="o">^</span><span class="n">set2</span>
+</pre></div>
+</div>
+<p>③相关方法</p>
+<dl>
+<dt>issubset,issuperset</dt><dd><div class="line-block">
+<div class="line">判断子集，超集</div>
+</div>
+</dd>
+<dt>add, remove</dt><dd><div class="line-block">
+<div class="line">字面意思</div>
+</div>
+</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="c">
+<h2>c.特殊类型<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
+<p><strong>frozenset({…}),此类集合不可变</strong></p>
+<p>意义：系统处理不可变数据更简单，消耗资源更少</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="page - 副本 (4).html" class="btn btn-neutral float-right" title="5.字典(dict)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="page - 副本 (2).html" class="btn btn-neutral float-left" title="3.字符串(str)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, XiongXinrui
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
