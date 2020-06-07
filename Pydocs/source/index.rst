@@ -8,9 +8,8 @@ Welcome to Pydocs's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :glob:
+   :caption: Contents:
 
-   page/*
 
 
 
